@@ -45,10 +45,10 @@ class ResponseDataObject(object):
 
     def _setattr(self, name, value, datetime_nodes):
         if name.lower() in datetime_nodes:
+            assert value.endswith('Z')
             try:
-                ts = "%s %s" % (value.partition(
-                    'T')[0], value.partition('T')[2].partition('.')[0])
-                value = datetime.datetime.strptime(ts, '%Y-%m-%d %H:%M:%S')
+                ts = value.replace('Z', '+0000')
+                value = datetime.datetime.strptime(ts, '%Y-%m-%dT%H:%M:%S.%f%z')
             except ValueError:
                 pass
 
