@@ -226,6 +226,8 @@ class Connection(BaseConnection):
             'getsearchresultsresponse.abstractrequest.outputselector',
             'getsellereventsresponse.abstractrequest.outputselector',
             'getsellerlistresponse.abstractrequest.outputselector',
+            'getsellerlistresponse.itemarray.item.variations.variation',
+            'getsellerlistresponse.itemarray.item.variations.variation.variationspecifics.namevaluelist',
             'getsellerpaymentsresponse.abstractrequest.outputselector',
             'getsellertransactionsresponse.abstractrequest.outputselector',
             'getmessagepreferencesresponse.asqpreferences.subject',
